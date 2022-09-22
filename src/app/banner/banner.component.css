@@ -1,0 +1,16 @@
+.offline-banner {
+    background-color: rgb(143, 139, 134);
+    width: 100%;
+    height: 70px;
+    margin: 0;
+}
+
+.close__button {
+    background-color: rgb(70, 70, 255);
+    float: right;
+    border-radius: 12%;
+    height: 40px;
+    width: 90px;
+    margin-right: 15px;
+    cursor: pointer;
+}

@@ -1,0 +1,23 @@
+<div class="gallery__wrapper">
+    <div class="gallery__content">
+        <igx-navbar>
+            <!-- <igx-icon (click)="connectionBanner.open()">refresh</igx-icon> -->
+        </igx-navbar>
+        <igx-banner class="offline-banner" #connectionBanner>
+            {{data}}
+            <igx-banner-actions>
+                <button class="close__button" igxButton igxRipple (click)="connectionBanner.close()">Dismiss</button>
+            </igx-banner-actions>
+        </igx-banner>
+        <!-- <igx-card class="gallery__item">
+            <div>
+                <img [src]="imageUrls[0]">
+            </div>
+        </igx-card>
+        <igx-card class="gallery__item">
+            <div>
+                <img [src]="imageUrls[1]">
+            </div>
+        </igx-card> -->
+    </div>
+</div>
