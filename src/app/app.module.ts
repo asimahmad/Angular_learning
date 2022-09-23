@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BannerComponent } from './banner/banner.component';
 import { ToastComponent } from './toast/toast.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ToastComponent } from './toast/toast.component';
 	IgxBannerModule,
 	IgxCardModule,
 	IgxIconModule,
-	IgxNavbarModule
+	IgxNavbarModule, 
+  HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent, BannerComponent]
