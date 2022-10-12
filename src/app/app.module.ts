@@ -14,12 +14,14 @@ import { AppComponent } from './app.component';
 import { BannerComponent } from './banner/banner.component';
 import { ToastComponent } from './toast/toast.component';
 import {HttpClientModule} from '@angular/common/http'
+import { ServerComponent } from './server/server.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BannerComponent,
-    ToastComponent
+    ToastComponent,
+    ServerComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,6 @@ import {HttpClientModule} from '@angular/common/http'
   HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent, BannerComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
