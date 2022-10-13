@@ -6,6 +6,7 @@
                 <!-- String interpolation has to return string in the end -->
                 <p>{{'Server'}} with ID {{serverId}} with status {{getServerStatus()}}</p>
                 <button class="btn btn-primary" [disabled]="!allowNewServer">Add server</button>
+                <p [innerText]="!allowNewServer">{{allowNewServer}}</p>
             </h3>
             <hr>
         </div>
