@@ -27,4 +27,17 @@ import { Component } from "@angular/core";
 })
 export class ServerComponent{
 
+    serverId: number = 10;
+    serverStatus: string = 'offline';
+    allowNewServer = false;
+
+    constructor(){
+        setTimeout(()=>{
+            this.allowNewServer = true;
+        },2000);
+    }
+    getServerStatus(){
+        return this.serverStatus;
+    }
+
 }
