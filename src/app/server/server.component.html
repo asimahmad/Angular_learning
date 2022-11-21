@@ -3,6 +3,8 @@
         <div class="col-xs-12">
             <h3>
                 <p>Server Component</p>
+                <input type="text" class="form-control" (input)="onUpdateServer($event)">
+                <p>{{serverName}}</p>
                 <!-- String interpolation has to return string in the end -->
                 <p>{{'Server'}} with ID {{serverId}} with status {{getServerStatus()}}</p>
                 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add server</button>
