@@ -38,6 +38,9 @@ export class ServerComponent{
         setTimeout(()=>{
             this.allowNewServer = true;
         },2000);
+
+        this.serverStatus = Math.random()> 0.5 ? 'online': 'offline';
+
     }
     getServerStatus(){
         return this.serverStatus;
@@ -53,5 +56,7 @@ export class ServerComponent{
         this.username='';
     }
 
-
+    getColor(){
+        return this.serverStatus === 'online'? 'green': 'red';
+    }
 }
