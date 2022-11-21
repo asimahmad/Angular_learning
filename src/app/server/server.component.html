@@ -22,4 +22,8 @@
             <button [disabled]='!username' (click)="resetUser()">Reset User</button>
         </div>
     </div>
+    <p *ngIf="serverName; else noServer">{{serverName}}</p>
+    <ng-template #noServer>
+        <p>No server is there (else condition)</p>
+    </ng-template>
 </div>
