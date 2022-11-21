@@ -31,3 +31,10 @@
         <p>No server is there (else condition)</p>
     </ng-template>
 </div>
+
+<div>
+    <p>Assignment 2</p>
+    <button (click)='getClickCount()'>Display details</button>
+    <p *ngFor='let count of clickCount' [ngStyle]='{backgroundColor: getBgColor()}' [ngClass]='{text:clickCount.length>=5}'>Secret password = luna</p>
+
+</div>

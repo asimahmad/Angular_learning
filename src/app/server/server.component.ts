@@ -26,8 +26,12 @@ import { Component } from "@angular/core";
     `
     .online{
         color: white;
+    }`,
+    `
+    .text{
+        color:white;
     }`
-    
+
     ]
 })
 export class ServerComponent{
@@ -38,6 +42,7 @@ export class ServerComponent{
     serverCreation = 'No server was created.';
     serverName = 'Test server';
     username='';
+    clickCount = [];
 
     constructor(){
         setTimeout(()=>{
@@ -63,5 +68,13 @@ export class ServerComponent{
 
     getColor(){
         return this.serverStatus === 'online'? 'green': 'red';
+    }
+    getBgColor(){
+        if( this.clickCount.length>=5)
+        return 'blue';
+        return null;
+    }
+    getClickCount(){
+        this.clickCount.length++;
     }
 }
