@@ -7,7 +7,9 @@
                 <p>{{serverName}}</p>
 
                 <!-- String interpolation has to return string in the end -->
-                <p [ngStyle]="{backgroundColor: getColor()}">{{'Server'}} with ID {{serverId}} with status {{getServerStatus()}}</p>
+                <p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online:serverStatus==='online'}">
+                    {{'Server'}} with ID {{serverId}} with status {{getServerStatus()}}
+                </p>
 
                 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add server</button>
                 <p [innerText]="!allowNewServer"></p>

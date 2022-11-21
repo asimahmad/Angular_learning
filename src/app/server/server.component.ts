@@ -22,7 +22,12 @@ import { Component } from "@angular/core";
     `
     h3{
         background-color:yellow
+    }`,
+    `
+    .online{
+        color: white;
     }`
+    
     ]
 })
 export class ServerComponent{
