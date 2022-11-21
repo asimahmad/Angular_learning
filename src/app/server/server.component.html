@@ -11,6 +11,9 @@
                 <p [innerText]="!allowNewServer"></p>
                 <p>{{serverCreation}}</p>
             </h3>
+            <p>With 2 way binding</p>
+            <input type="text" class="form-control" [(ngModel)]='serverName'>
+            <p>{{serverName}}</p>
             <hr>
         </div>
     </div>

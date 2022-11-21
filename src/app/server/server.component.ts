@@ -31,7 +31,7 @@ export class ServerComponent{
     serverStatus: string = 'offline';
     allowNewServer = false;
     serverCreation = 'No server was created.';
-    serverName = '';
+    serverName = 'Test server';
 
     constructor(){
         setTimeout(()=>{
