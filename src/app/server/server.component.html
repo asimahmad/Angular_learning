@@ -15,6 +15,11 @@
             <input type="text" class="form-control" [(ngModel)]='serverName'>
             <p>{{serverName}}</p>
             <hr>
+
+            <p>Assignment</p>
+            <input type="text" class="form-control" [(ngModel)]='username'>
+            <p>{{username}}</p>
+            <button [disabled]='!username' (click)="resetUser()">Reset User</button>
         </div>
     </div>
 </div>
