@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
+import {UserService} from './user.service'
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,15 @@ import Swal from 'sweetalert2';
 export class AppComponent {
   title = 'banner-pro';
   message = 'this is release note'
+  users: any
   // notes = 'This is release notes for the particular date.';
 
+  constructor(private user: UserService){
+    this.user.getData().subscribe(data =>{
+      console.log(data);
+      this.users = data;
+    })
+  }
 
   simpleAlert(){
     Swal.fire(this.message)

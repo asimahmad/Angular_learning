@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>
+                <p>Server Component</p>
+                <input type="text" class="form-control" (input)="onUpdateServer($event)">
+                <p>{{serverName}}</p>
+
+                <!-- String interpolation has to return string in the end -->
+                <p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online:serverStatus==='online'}">
+                    {{'Server'}} with ID {{serverId}} with status {{getServerStatus()}}
+                </p>
+
+                <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add server</button>
+                <p [innerText]="!allowNewServer"></p>
+                <p>{{serverCreation}}</p>
+            </h3>
+            <p>With 2 way binding</p>
+            <input type="text" class="form-control" [(ngModel)]='serverName'>
+            <p>{{serverName}}</p>
+            <hr>
+
+            <p>Assignment</p>
+            <input type="text" class="form-control" [(ngModel)]='username'>
+            <p>{{username}}</p>
+            <button [disabled]='!username' (click)="resetUser()">Reset User</button>
+        </div>
+    </div>
+    <p *ngIf="serverName; else noServer">{{serverName}}</p>
+    <ng-template #noServer>
+        <p>No server is there (else condition)</p>
+    </ng-template>
+</div>
+
+<div>
+    <p>Assignment 2</p>
+    <button (click)='getClickCount()'>Display details</button>
+    <p *ngFor='let count of clickCount' [ngStyle]='{backgroundColor: getBgColor()}' [ngClass]='{text:clickCount.length>=5}'>Secret password = luna</p>
+
+</div>

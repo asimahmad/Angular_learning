@@ -1,4 +1,8 @@
 <app-banner></app-banner>
+<app-server></app-server>
+
+<!-- <div app-server></div> // selecting with element selector -->
+<!-- <div class="app-server"></div>using with class selector -->
 <h1>Alert</h1>
 <button (click)='simpleAlert()'>
   Login
@@ -12,3 +16,8 @@
   Confirm Login
 </button>
 <app-toast></app-toast>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.name}}
+    </li>
+</ul>
